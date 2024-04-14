@@ -4,17 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="操作系统期末复习, learning,life,coding,computer science">
-    <meta name="description" content="参考笔记上面这篇操作系统笔记写得很好，可供学习参考。这篇笔记主要用作期末应试。
-进程调度调度算法：
+    <meta name="keywords" content="编译原理期末复习, learning,life,coding,computer science">
+    <meta name="description" content="第四章 语法分析LL(1)文法考题如果一个文法的预测分析表M不含多重定义的表项，则称该文法为LL(1)文法。LL(1)的含义：
 
-FCFS先到先服务算法
-SJF最短作业优先算法
-PR优先级算法
-RR时间片轮转调度算法
-MLQ多级队列调度算法
-
-画甘特图分为一维甘特图（">
+第一个L表示从左至右扫描输入符号串
+第二个L表示生成输入串的一个最左推导
+1表示在决定分析程序的每步动作时，向">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -26,7 +21,7 @@ MLQ多级队列调度算法
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>操作系统期末复习 | Davian&#39;s Blog</title>
+    <title>编译原理期末复习 | Davian&#39;s Blog</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/medias/favicon.ico">
     
     <style>
@@ -280,12 +275,12 @@ MLQ多级队列调度算法
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">操作系统期末复习</h1>
+                    <h1 class="description center-align post-title">编译原理期末复习</h1>
                 </div>
             </div>
         </div>
@@ -313,12 +308,8 @@ MLQ多级队列调度算法
                                 <span class="chip bg-color">期末复习</span>
                             </a>
                         
-                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                <span class="chip bg-color">笔记</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
-                                <span class="chip bg-color">操作系统</span>
+                            <a href="/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">
+                                <span class="chip bg-color">编译原理</span>
                             </a>
                         
                     </div>
@@ -342,21 +333,21 @@ MLQ多级队列调度算法
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-01-07
+                    2024-04-15
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-01-07
+                    2024-04-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    582
+                    779
                 </div>
                 
 
@@ -386,32 +377,51 @@ MLQ多级队列调度算法
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><a target="_blank" rel="noopener" href="https://hillzhang1999.gitee.io/2020/05/14/cao-zuo-xi-tong-quan-bu-bi-ji/#toc-heading-102">参考笔记</a><br>上面这篇操作系统笔记写得很好，可供学习参考。这篇笔记主要用作期末应试。</p>
-<h2 id="进程调度"><a href="#进程调度" class="headerlink" title="进程调度"></a>进程调度</h2><p>调度算法：</p>
+                <h1 id="第四章-语法分析"><a href="#第四章-语法分析" class="headerlink" title="第四章 语法分析"></a>第四章 语法分析</h1><h2 id="LL-1-文法考题"><a href="#LL-1-文法考题" class="headerlink" title="LL(1)文法考题"></a>LL(1)文法考题</h2><p>如果一个文法的预测分析表M不含多重定义的表项，则称该文法为LL(1)文法。<br>LL(1)的含义：</p>
 <ul>
-<li>FCFS先到先服务算法</li>
-<li>SJF最短作业优先算法</li>
-<li>PR优先级算法</li>
-<li>RR时间片轮转调度算法</li>
-<li>MLQ多级队列调度算法</li>
+<li>第一个L表示从左至右扫描输入符号串</li>
+<li>第二个L表示生成输入串的一个最左推导</li>
+<li>1表示在决定分析程序的每步动作时，向前看一个符号<br><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/LL(1).png"></li>
 </ul>
-<h3 id="画甘特图"><a href="#画甘特图" class="headerlink" title="画甘特图"></a>画甘特图</h3><p>分为一维甘特图（只给了进程总的占用时间）和二维甘特图（考虑进程的CPU、I/O各自的占用时间），以下为各自的例子：<br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/Gantt1.png"><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/Grantt2.png"></p>
-<h3 id="计算调度准则"><a href="#计算调度准则" class="headerlink" title="计算调度准则"></a>计算调度准则</h3><p><strong>周转时间</strong>：进程从提交到结束运行的全部时间。<br><strong>等待时间</strong>：进程在就绪队列中等待所花时间之和。<br><strong>响应时间</strong>：进程从提交到第一次运行的时间。<br><strong>CPU利用率</strong>：固定时间内CPU运行时间的比例。<br><strong>吞吐量</strong>：单位时间内完成进程的数量。</p>
-<h2 id="进程同步"><a href="#进程同步" class="headerlink" title="进程同步"></a>进程同步</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43450715/article/details/119204741">信号量及经典问题</a><br>上面这篇笔记也写得很好，建议慢慢看，看懂</p>
-<h2 id="银行家算法"><a href="#银行家算法" class="headerlink" title="银行家算法"></a>银行家算法</h2><h3 id="死锁避免"><a href="#死锁避免" class="headerlink" title="死锁避免"></a>死锁避免</h3><h3 id="死锁检测"><a href="#死锁检测" class="headerlink" title="死锁检测"></a>死锁检测</h3><h2 id="磁盘调度"><a href="#磁盘调度" class="headerlink" title="磁盘调度"></a>磁盘调度</h2><ul>
-<li>FCFS：磁盘的读写头会按照请求到达的顺序进行服务</li>
-<li>SSTF(Shortest Seek Time First)：选择磁头当前位置距离最近的请求</li>
-<li>SCAN(电梯调度算法)：磁盘的读写头从一端开始移动到另一端，处理路径上的所有请求，到达末端后反向移动。</li>
-<li>C-SCAN（Circular SCAN）：磁盘的读写头从一端移动到另一端处理请求，但到达末端后直接快速返回到起始端，而不是反向移动。</li>
-<li>C-LOOK：与C-SCAN类似，但读写头在到达最后一个请求后直接返回到第一个请求，而不是返回到磁盘的物理末端。<br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/FCFS.png"><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/SSTF.png"><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/SCAN.png"><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/C-SCAN.png"><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/C-LOOK.png"></li>
-</ul>
-<h2 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h2><h3 id="页面置换算法"><a href="#页面置换算法" class="headerlink" title="页面置换算法"></a>页面置换算法</h3><p><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/FIFO.png"><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/OPT.png"><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/LRU.png"><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/er-ci-ji-hui.png"></p>
-<h2 id="磁盘管理"><a href="#磁盘管理" class="headerlink" title="磁盘管理"></a>磁盘管理</h2><h3 id="多级索引"><a href="#多级索引" class="headerlink" title="多级索引"></a>多级索引</h3><p><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/duo-ji-suo-yin.png"></p>
+<h3 id="左递归的消除"><a href="#左递归的消除" class="headerlink" title="左递归的消除"></a>左递归的消除</h3><p><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/zuo-di-gui.png"></p>
+<h3 id="提取左公因子"><a href="#提取左公因子" class="headerlink" title="提取左公因子"></a>提取左公因子</h3><p><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/zuo-gong-yin-zi.png"></p>
+<h3 id="构造FIRST、FOLLOW集"><a href="#构造FIRST、FOLLOW集" class="headerlink" title="构造FIRST、FOLLOW集"></a>构造FIRST、FOLLOW集</h3><p>FIRST集的构造较简单，方法略。<br><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/FOLLOW.png"><br><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/FIRST-FOLLOW.png"></p>
+<h3 id="构造预测分析表"><a href="#构造预测分析表" class="headerlink" title="构造预测分析表"></a>构造预测分析表</h3><p><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/LL(1)-biao.png"></p>
+<h2 id="LR文法考题"><a href="#LR文法考题" class="headerlink" title="LR文法考题"></a>LR文法考题</h2><p>LR分析：移进-规约分析，是规范规约分析。</p>
 <ul>
-<li>如果存放文件所需的数据块小于 10 块，则采用直接查找的方式；</li>
-<li>如果存放文件所需的数据块超过 10 块，则采用一级间接索引方式；</li>
-<li>如果前面两种方式都不够存放大文件，则采用二级间接索引方式；</li>
-<li>如果二级间接索引也不够存放大文件，这采用三级间接索引方式；<br>chatgpt的解释：<br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/inode.png"><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/maxsize.png"></li>
+<li>使用一个符号栈，将输入符号移进栈中，直到栈顶的符号串形成某个产生式的一个候选式，将栈顶的部分符号规约为该产生是的左部。<br>LR(k)的含义：</li>
+<li>L表示自左至右扫描输入符号串</li>
+<li>R表示为输入符号串构造一个最右推导的逆过程</li>
+<li>k表示为确定分析动作而向前看的输入符号个数<br><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/LR.png"></li>
+</ul>
+<h3 id="拓广文法"><a href="#拓广文法" class="headerlink" title="拓广文法"></a>拓广文法</h3><ul>
+<li>添加$S’-&gt;S$</li>
+<li>标序号<br><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/tuo-guang.png"></li>
+</ul>
+<h3 id="构造文法G的LR-0-项目集规范族"><a href="#构造文法G的LR-0-项目集规范族" class="headerlink" title="构造文法G的LR(0)项目集规范族"></a>构造文法G的LR(0)项目集规范族</h3><p><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/LR(0)-xiang-mu-ji-gui-fan-zu.png"></p>
+<h3 id="识别文法G‘的所有活前缀的DFA"><a href="#识别文法G‘的所有活前缀的DFA" class="headerlink" title="识别文法G‘的所有活前缀的DFA"></a>识别文法G‘的所有活前缀的DFA</h3><p><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/LR(0)-DFA.png" alt="|575"></p>
+<h3 id="构造SLR-1-分析表"><a href="#构造SLR-1-分析表" class="headerlink" title="构造SLR(1)分析表"></a>构造SLR(1)分析表</h3><p><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/SLR(1)-biao.png"></p>
+<ul>
+<li>假如用上述算法构造出的分析表不含有冲突，则该分析表称为该文法的SLR(1)分析表。</li>
+<li>具有SLR(1)分析表的文法称为SLR(1)文法。<br><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/chong-tu-jie-jue.png"></li>
+</ul>
+<h2 id="LR-1-文法考题"><a href="#LR-1-文法考题" class="headerlink" title="LR(1)文法考题"></a>LR(1)文法考题</h2><ul>
+<li>在SLR(1)方法中，当冲突不可解决时，就不可能通过SLR(1)分析表构造规则来构造SLR(1)分析包。这时就用LR(1)分析。</li>
+<li>LR(k)项目：$[A-&gt;\alpha·\beta,a_1a_2…a_k]$</li>
+<li>向前搜索符号仅对规约项目起作用，意味着，当它所属项目集对应的状态在栈顶，且后续的输入符号为a时，才允许把栈顶的文法符号串规约为A。<br><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/LR(1)-1.png"><br><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/LR(1)-2.png"></li>
+</ul>
+<h3 id="构造LR-1-项目集规范族及识别其所有活前缀的DFA"><a href="#构造LR-1-项目集规范族及识别其所有活前缀的DFA" class="headerlink" title="构造LR(1)项目集规范族及识别其所有活前缀的DFA"></a>构造LR(1)项目集规范族及识别其所有活前缀的DFA</h3><p><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/LR(1)-xiang-mu-ji-gui-fan-zu.png"></p>
+<h3 id="构造文法G的LR-1-分析表"><a href="#构造文法G的LR-1-分析表" class="headerlink" title="构造文法G的LR(1)分析表"></a>构造文法G的LR(1)分析表</h3><ol>
+<li>构造文法G的拓广文法G’</li>
+<li>构造文法G‘的LR(1)项目集规范族<br><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/LR(1)-biao-1.png"><br><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/LR(1)-biao-2.png"></li>
+</ol>
+<h3 id="LALR-1-分析表的构造"><a href="#LALR-1-分析表的构造" class="headerlink" title="LALR(1)分析表的构造"></a>LALR(1)分析表的构造</h3><p>如果两个LR(1)项目集去掉搜索符号之后是相同的，则称这两个项目集是同心集。<br>基本思想：合并LR(1)项目集规范族中的同心集，以减少分析表的状态数。<br>合并后如果不存在归约-归约冲突，则文法是LALR(1)文法，可继续构造LALR(1)分析表。</p>
+<h2 id="文法总结"><a href="#文法总结" class="headerlink" title="文法总结"></a>文法总结</h2><h3 id="四种LR文法的判别方法"><a href="#四种LR文法的判别方法" class="headerlink" title="四种LR文法的判别方法"></a>四种LR文法的判别方法</h3><ul>
+<li>任何的二义性文法都不是LR类文法</li>
+<li>LR(0)文法：所有的LR(0)项目集中没有移进-归约冲突或归约-归约冲突。</li>
+<li>SLR(1)文法：LR(0)项目集中所有含冲突的项目集都能用SLR规则解决冲突。</li>
+<li>LR(1)文法：LR(1)项目集中无移进-归约冲突或归约-归约冲突。</li>
+<li>LALR(1)文法：LALR(1)项目集中无归约-归约冲突。<br><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/relation.png" alt="|550"></li>
 </ul>
 
                 
@@ -439,7 +449,7 @@ MLQ多级队列调度算法
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://daixinwang.github.io/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/">https://daixinwang.github.io/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/</a>
+                    <a href="https://daixinwang.github.io/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/">https://daixinwang.github.io/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -481,12 +491,8 @@ MLQ多级队列调度算法
                                     <span class="chip bg-color">期末复习</span>
                                 </a>
                             
-                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                    <span class="chip bg-color">笔记</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
-                                    <span class="chip bg-color">操作系统</span>
+                                <a href="/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">
+                                    <span class="chip bg-color">编译原理</span>
                                 </a>
                             
                         </div>
@@ -532,29 +538,84 @@ MLQ多级队列调度算法
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2024/01/09/suan-fa-she-ji-yu-fen-xi-qi-mo-fu-xi/">
+                <a href="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="算法设计与分析期末复习">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="编译原理期末复习">
                         
-                        <span class="card-title">算法设计与分析期末复习</span>
+                        <span class="card-title">编译原理期末复习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            大三上算法设计与分析期末复习
+                            大三下编译原理期末复习
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-01-09
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" class="post-category">
+                                    期末复习
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/">
+                        <span class="chip bg-color">期末复习</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">
+                        <span class="chip bg-color">编译原理</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/01/11/ji-qi-xue-xi-qi-mo-fu-xi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="机器学习期末复习">
+                        
+                        <span class="card-title">机器学习期末复习</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            大三上机器学习期末复习
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-11
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -578,61 +639,8 @@ MLQ多级队列调度算法
                         <span class="chip bg-color">笔记</span>
                     </a>
                     
-                    <a href="/tags/%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">算法</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2024/01/04/shu-ju-ku-qi-mo-fu-xi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="数据库期末复习">
-                        
-                        <span class="card-title">数据库期末复习</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            大三上数据库期末复习
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-04
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" class="post-category">
-                                    期末复习
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/">
-                        <span class="chip bg-color">期末复习</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                        <span class="chip bg-color">数据库</span>
+                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">机器学习</span>
                     </a>
                     
                 </div>

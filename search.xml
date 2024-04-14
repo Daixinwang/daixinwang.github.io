@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>编译原理期末复习</title>
+      <link href="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/"/>
+      <url>/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="第四章-语法分析"><a href="#第四章-语法分析" class="headerlink" title="第四章 语法分析"></a>第四章 语法分析</h1><h2 id="LL-1-文法考题"><a href="#LL-1-文法考题" class="headerlink" title="LL(1)文法考题"></a>LL(1)文法考题</h2><p>如果一个文法的预测分析表M不含多重定义的表项，则称该文法为LL(1)文法。<br>LL(1)的含义：</p><ul><li>第一个L表示从左至右扫描输入符号串</li><li>第二个L表示生成输入串的一个最左推导</li><li>1表示在决定分析程序的每步动作时，向前看一个符号<br><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/LL(1).png"></li></ul><h3 id="左递归的消除"><a href="#左递归的消除" class="headerlink" title="左递归的消除"></a>左递归的消除</h3><p><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/zuo-di-gui.png"></p><h3 id="提取左公因子"><a href="#提取左公因子" class="headerlink" title="提取左公因子"></a>提取左公因子</h3><p><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/zuo-gong-yin-zi.png"></p><h3 id="构造FIRST、FOLLOW集"><a href="#构造FIRST、FOLLOW集" class="headerlink" title="构造FIRST、FOLLOW集"></a>构造FIRST、FOLLOW集</h3><p>FIRST集的构造较简单，方法略。<br><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/FOLLOW.png"><br><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/FIRST-FOLLOW.png"></p><h3 id="构造预测分析表"><a href="#构造预测分析表" class="headerlink" title="构造预测分析表"></a>构造预测分析表</h3><p><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/LL(1)-biao.png"></p><h2 id="LR文法考题"><a href="#LR文法考题" class="headerlink" title="LR文法考题"></a>LR文法考题</h2><p>LR分析：移进-规约分析，是规范规约分析。</p><ul><li>使用一个符号栈，将输入符号移进栈中，直到栈顶的符号串形成某个产生式的一个候选式，将栈顶的部分符号规约为该产生是的左部。<br>LR(k)的含义：</li><li>L表示自左至右扫描输入符号串</li><li>R表示为输入符号串构造一个最右推导的逆过程</li><li>k表示为确定分析动作而向前看的输入符号个数<br><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/LR.png"></li></ul><h3 id="拓广文法"><a href="#拓广文法" class="headerlink" title="拓广文法"></a>拓广文法</h3><ul><li>添加$S’-&gt;S$</li><li>标序号<br><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/tuo-guang.png"></li></ul><h3 id="构造文法G的LR-0-项目集规范族"><a href="#构造文法G的LR-0-项目集规范族" class="headerlink" title="构造文法G的LR(0)项目集规范族"></a>构造文法G的LR(0)项目集规范族</h3><p><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/LR(0)-xiang-mu-ji-gui-fan-zu.png"></p><h3 id="识别文法G‘的所有活前缀的DFA"><a href="#识别文法G‘的所有活前缀的DFA" class="headerlink" title="识别文法G‘的所有活前缀的DFA"></a>识别文法G‘的所有活前缀的DFA</h3><p><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/LR(0)-DFA.png" alt="|575"></p><h3 id="构造SLR-1-分析表"><a href="#构造SLR-1-分析表" class="headerlink" title="构造SLR(1)分析表"></a>构造SLR(1)分析表</h3><p><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/SLR(1)-biao.png"></p><ul><li>假如用上述算法构造出的分析表不含有冲突，则该分析表称为该文法的SLR(1)分析表。</li><li>具有SLR(1)分析表的文法称为SLR(1)文法。<br><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/chong-tu-jie-jue.png"></li></ul><h2 id="LR-1-文法考题"><a href="#LR-1-文法考题" class="headerlink" title="LR(1)文法考题"></a>LR(1)文法考题</h2><ul><li>在SLR(1)方法中，当冲突不可解决时，就不可能通过SLR(1)分析表构造规则来构造SLR(1)分析包。这时就用LR(1)分析。</li><li>LR(k)项目：$[A-&gt;\alpha·\beta,a_1a_2…a_k]$</li><li>向前搜索符号仅对规约项目起作用，意味着，当它所属项目集对应的状态在栈顶，且后续的输入符号为a时，才允许把栈顶的文法符号串规约为A。<br><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/LR(1)-1.png"><br><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/LR(1)-2.png"></li></ul><h3 id="构造LR-1-项目集规范族及识别其所有活前缀的DFA"><a href="#构造LR-1-项目集规范族及识别其所有活前缀的DFA" class="headerlink" title="构造LR(1)项目集规范族及识别其所有活前缀的DFA"></a>构造LR(1)项目集规范族及识别其所有活前缀的DFA</h3><p><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/LR(1)-xiang-mu-ji-gui-fan-zu.png"></p><h3 id="构造文法G的LR-1-分析表"><a href="#构造文法G的LR-1-分析表" class="headerlink" title="构造文法G的LR(1)分析表"></a>构造文法G的LR(1)分析表</h3><ol><li>构造文法G的拓广文法G’</li><li>构造文法G‘的LR(1)项目集规范族<br><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/LR(1)-biao-1.png"><br><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/LR(1)-biao-2.png"></li></ol><h3 id="LALR-1-分析表的构造"><a href="#LALR-1-分析表的构造" class="headerlink" title="LALR(1)分析表的构造"></a>LALR(1)分析表的构造</h3><p>如果两个LR(1)项目集去掉搜索符号之后是相同的，则称这两个项目集是同心集。<br>基本思想：合并LR(1)项目集规范族中的同心集，以减少分析表的状态数。<br>合并后如果不存在归约-归约冲突，则文法是LALR(1)文法，可继续构造LALR(1)分析表。</p><h2 id="文法总结"><a href="#文法总结" class="headerlink" title="文法总结"></a>文法总结</h2><h3 id="四种LR文法的判别方法"><a href="#四种LR文法的判别方法" class="headerlink" title="四种LR文法的判别方法"></a>四种LR文法的判别方法</h3><ul><li>任何的二义性文法都不是LR类文法</li><li>LR(0)文法：所有的LR(0)项目集中没有移进-归约冲突或归约-归约冲突。</li><li>SLR(1)文法：LR(0)项目集中所有含冲突的项目集都能用SLR规则解决冲突。</li><li>LR(1)文法：LR(1)项目集中无移进-归约冲突或归约-归约冲突。</li><li>LALR(1)文法：LALR(1)项目集中无归约-归约冲突。<br><img src="/2024/04/15/bian-yi-yuan-li-qi-mo-fu-xi/relation.png" alt="|550"></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 期末复习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 期末复习 </tag>
+            
+            <tag> 编译原理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>机器学习期末复习</title>
       <link href="/2024/01/11/ji-qi-xue-xi-qi-mo-fu-xi/"/>
       <url>/2024/01/11/ji-qi-xue-xi-qi-mo-fu-xi/</url>
@@ -20,9 +47,9 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> 期末复习 </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 机器学习 </tag>
             
@@ -49,9 +76,9 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> 期末复习 </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 算法 </tag>
             
@@ -78,9 +105,9 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> 期末复习 </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 操作系统 </tag>
             
@@ -134,11 +161,11 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
+            <tag> Linux </tag>
             
             <tag> 期末复习 </tag>
             
-            <tag> Linux </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -219,9 +246,9 @@
             
             <tag> 大数据技术基础 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 期末复习 </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
