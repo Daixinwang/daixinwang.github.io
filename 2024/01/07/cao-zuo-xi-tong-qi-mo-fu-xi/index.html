@@ -12,9 +12,7 @@ FCFS先到先服务算法
 SJF最短作业优先算法
 PR优先级算法
 RR时间片轮转调度算法
-MLQ多级队列调度算法
-
-画甘特图分为一维甘特图（">
+MLQ多级队列调度算法画甘特图分为一维甘特图（只给">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -393,25 +391,18 @@ MLQ多级队列调度算法
 <li>SJF最短作业优先算法</li>
 <li>PR优先级算法</li>
 <li>RR时间片轮转调度算法</li>
-<li>MLQ多级队列调度算法</li>
+<li>MLQ多级队列调度算法<h3 id="画甘特图"><a href="#画甘特图" class="headerlink" title="画甘特图"></a>画甘特图</h3>分为一维甘特图（只给了进程总的占用时间）和二维甘特图（考虑进程的CPU、I/O各自的占用时间），以下为各自的例子：<br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/Gantt1.png" alt=""><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/Grantt2.png" alt=""><h3 id="计算调度准则"><a href="#计算调度准则" class="headerlink" title="计算调度准则"></a>计算调度准则</h3><strong>周转时间</strong>：进程从提交到结束运行的全部时间。<br><strong>等待时间</strong>：进程在就绪队列中等待所花时间之和。<br><strong>响应时间</strong>：进程从提交到第一次运行的时间。<br><strong>CPU利用率</strong>：固定时间内CPU运行时间的比例。<br><strong>吞吐量</strong>：单位时间内完成进程的数量。<h2 id="进程同步"><a href="#进程同步" class="headerlink" title="进程同步"></a>进程同步</h2><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43450715/article/details/119204741">信号量及经典问题</a><br>上面这篇笔记也写得很好，建议慢慢看，看懂</li>
 </ul>
-<h3 id="画甘特图"><a href="#画甘特图" class="headerlink" title="画甘特图"></a>画甘特图</h3><p>分为一维甘特图（只给了进程总的占用时间）和二维甘特图（考虑进程的CPU、I/O各自的占用时间），以下为各自的例子：<br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/Gantt1.png"><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/Grantt2.png"></p>
-<h3 id="计算调度准则"><a href="#计算调度准则" class="headerlink" title="计算调度准则"></a>计算调度准则</h3><p><strong>周转时间</strong>：进程从提交到结束运行的全部时间。<br><strong>等待时间</strong>：进程在就绪队列中等待所花时间之和。<br><strong>响应时间</strong>：进程从提交到第一次运行的时间。<br><strong>CPU利用率</strong>：固定时间内CPU运行时间的比例。<br><strong>吞吐量</strong>：单位时间内完成进程的数量。</p>
-<h2 id="进程同步"><a href="#进程同步" class="headerlink" title="进程同步"></a>进程同步</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43450715/article/details/119204741">信号量及经典问题</a><br>上面这篇笔记也写得很好，建议慢慢看，看懂</p>
 <h2 id="银行家算法"><a href="#银行家算法" class="headerlink" title="银行家算法"></a>银行家算法</h2><h3 id="死锁避免"><a href="#死锁避免" class="headerlink" title="死锁避免"></a>死锁避免</h3><h3 id="死锁检测"><a href="#死锁检测" class="headerlink" title="死锁检测"></a>死锁检测</h3><h2 id="磁盘调度"><a href="#磁盘调度" class="headerlink" title="磁盘调度"></a>磁盘调度</h2><ul>
 <li>FCFS：磁盘的读写头会按照请求到达的顺序进行服务</li>
 <li>SSTF(Shortest Seek Time First)：选择磁头当前位置距离最近的请求</li>
 <li>SCAN(电梯调度算法)：磁盘的读写头从一端开始移动到另一端，处理路径上的所有请求，到达末端后反向移动。</li>
 <li>C-SCAN（Circular SCAN）：磁盘的读写头从一端移动到另一端处理请求，但到达末端后直接快速返回到起始端，而不是反向移动。</li>
-<li>C-LOOK：与C-SCAN类似，但读写头在到达最后一个请求后直接返回到第一个请求，而不是返回到磁盘的物理末端。<br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/FCFS.png"><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/SSTF.png"><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/SCAN.png"><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/C-SCAN.png"><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/C-LOOK.png"></li>
-</ul>
-<h2 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h2><h3 id="页面置换算法"><a href="#页面置换算法" class="headerlink" title="页面置换算法"></a>页面置换算法</h3><p><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/FIFO.png"><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/OPT.png"><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/LRU.png"><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/er-ci-ji-hui.png"></p>
-<h2 id="磁盘管理"><a href="#磁盘管理" class="headerlink" title="磁盘管理"></a>磁盘管理</h2><h3 id="多级索引"><a href="#多级索引" class="headerlink" title="多级索引"></a>多级索引</h3><p><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/duo-ji-suo-yin.png"></p>
-<ul>
+<li>C-LOOK：与C-SCAN类似，但读写头在到达最后一个请求后直接返回到第一个请求，而不是返回到磁盘的物理末端。<br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/FCFS.png" alt=""><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/SSTF.png" alt=""><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/SCAN.png" alt=""><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/C-SCAN.png" alt=""><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/C-LOOK.png" alt=""><h2 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h2><h3 id="页面置换算法"><a href="#页面置换算法" class="headerlink" title="页面置换算法"></a>页面置换算法</h3><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/FIFO.png" alt=""><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/OPT.png" alt=""><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/LRU.png" alt=""><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/er-ci-ji-hui.png" alt=""><h2 id="磁盘管理"><a href="#磁盘管理" class="headerlink" title="磁盘管理"></a>磁盘管理</h2><h3 id="多级索引"><a href="#多级索引" class="headerlink" title="多级索引"></a>多级索引</h3><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/duo-ji-suo-yin.png" alt=""></li>
 <li>如果存放文件所需的数据块小于 10 块，则采用直接查找的方式；</li>
 <li>如果存放文件所需的数据块超过 10 块，则采用一级间接索引方式；</li>
 <li>如果前面两种方式都不够存放大文件，则采用二级间接索引方式；</li>
-<li>如果二级间接索引也不够存放大文件，这采用三级间接索引方式；<br>chatgpt的解释：<br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/inode.png"><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/maxsize.png"></li>
+<li>如果二级间接索引也不够存放大文件，这采用三级间接索引方式；<br>chatgpt的解释：<br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/inode.png" alt=""><br><img src="/2024/01/07/cao-zuo-xi-tong-qi-mo-fu-xi/maxsize.png" alt=""></li>
 </ul>
 
                 
@@ -815,7 +806,7 @@ MLQ多级队列调度算法
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">45.8k</span>
+                        class="white-color">45.7k</span>
             
             
             
